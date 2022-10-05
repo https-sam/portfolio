@@ -41,9 +41,9 @@ const Projects = () => {
   ];
 
   return (
-    <div className=" dark:bg-gray-800">
+    <div className=" dark:bg-gray-800" id="section-projects">
       <div className="w-screen flex relative flex-col bg-white dark:bg-gray-800">
-        <h1 className="font-wideTitle text-[8vw] mb-5 ml-5 md:text-[3.5rem] xl:text-[4rem] tracking-[2px] md:tracking-[4px] text-gray-800 lg:text-white dark:text-gray-200 z-10 select-none">
+        <h1 className="font-wideTitle text-[8vw] mb-5 ml-5 mt-10 md:text-[3.5rem] xl:text-[4rem] tracking-[2px] md:tracking-[4px] text-gray-800 lg:text-white dark:text-gray-200 z-10 select-none">
           Projects
         </h1>
         <div className="hidden lg:block w-[30%] h-full bg-gray-600 absolute left-0" />

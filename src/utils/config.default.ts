@@ -1,3 +1,4 @@
 export const config = {
-  myGithubLink: "https://github.com/https-sam",
+  myGithubLink: "https://www.github.com/https-sam",
+  myLinkedinLink: "https://www.linkedin.com/in/samgoto",
 };

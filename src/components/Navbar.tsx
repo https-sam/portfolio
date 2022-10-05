@@ -4,24 +4,41 @@ import { useOutsideClickDetector } from "../utils/customHooks";
 import "./styles.css";
 
 const Navbar = ({ toggleTheme, theme }: any) => {
+  const scrollInto = (id: string) => {
+    if (document.getElementById(id)) {
+      document.getElementById(id)?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
   const navItems = [
     {
       name: "About",
       link: "",
+      action: () => scrollInto("section-about"),
     },
     {
       name: "Projects",
       link: "",
+      action: () => scrollInto("section-projects"),
     },
     {
       name: "Skills",
       link: "",
+      action: () => scrollInto("section-skills"),
     },
     {
       name: "Contact",
       link: "",
+      action: () => scrollInto("section-contact"),
     },
   ];
+
+  window.scrollBy({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
 
   const [isOpen, setDropdownOpen] = useState(false);
   const openDropdown = useRef<HTMLDivElement>(null);
@@ -34,7 +51,7 @@ const Navbar = ({ toggleTheme, theme }: any) => {
   );
 
   return (
-    <div className="w-screen flex h-[3.5rem] justify-end md:justify-center p-3 items-center fixed bg-white/30 dark:bg-gray-800/30 backdrop-blur-[8px] z-[100]">
+    <div className="w-screen flex h-[3.5rem] justify-end md:justify-center p-3 items-center fixed bg-white/30 dark:bg-gray-800/60 backdrop-blur-[8px] z-[100]">
       {/* Nornal list for > md screen */}
       <ul
         className="w-full lg:w-[30%] max-w-[400px] flex justify-between select-none"
@@ -42,6 +59,7 @@ const Navbar = ({ toggleTheme, theme }: any) => {
       >
         {navItems.map((item, index) => (
           <li
+            onClick={item.action}
             key={index}
             className="font-Poppins cursor-pointer text-black dark:text-gray-200 font-medium hover:bg-gray-300/30 rounded-md py-1 px-4 transition duration-300 ease-in-out hover:rounded-lg"
           >

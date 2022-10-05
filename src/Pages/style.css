@@ -8,3 +8,18 @@
   50% { color: blue; }
   100% { color: red; }
 }
+
+
+/* #intro-container::after {
+  z-index: 10;
+  content: "";
+  position: absolute;
+  top: 7px;
+  border-left: 5px solid black;
+  height: 100%;
+  left: 0;
+} */
+
+#intro-container:hover ~ #intro-shadow {
+  background-color: red;
+}

@@ -82,13 +82,18 @@ const ProjectCard = (item: Props) => {
         </div>
 
         {/* Image part in the right side */}
-        <div className="w-[40%] h-full place-items-center hidden md:grid select-none">
+        <a
+          href={item.websiteURI}
+          rel="noreferrer"
+          target="_blank"
+          className="w-[40%] h-full place-items-center hidden md:grid select-none cursor-pointer"
+        >
           <img
             alt="project preview"
             src={item.image}
             className=" h-[20rem] -translate-y-5 object-cover rounded-lg mt-[3rem] transition duration-300 ease-in-out hover:-translate-y-8 hover:shadow-xl z-10"
           />
-        </div>
+        </a>
       </div>
     </div>
   );
