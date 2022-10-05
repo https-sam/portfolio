@@ -5,14 +5,24 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#1F2936" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="description" content="Sam Goto Portfolio Website" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="sam-mount-point"></div>
+    <script>
+      if (
+        localStorage.getItem("theme") === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+        document.body.style.backgroundColor = "#1F2936";
+      } else {
+        document.documentElement.classList.remove("dark");
+        document.body.style.backgroundColor = "white";
+      }
+    </script>
   </body>
 </html>

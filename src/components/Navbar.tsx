@@ -8,6 +8,8 @@ const Navbar = ({ toggleTheme, theme }: any) => {
     if (document.getElementById(id)) {
       document.getElementById(id)?.scrollIntoView({
         behavior: "smooth",
+        block: "start",
+        inline: "start",
       });
     }
   };
@@ -34,12 +36,6 @@ const Navbar = ({ toggleTheme, theme }: any) => {
     },
   ];
 
-  window.scrollBy({
-    top: 0,
-    left: 0,
-    behavior: "smooth",
-  });
-
   const [isOpen, setDropdownOpen] = useState(false);
   const openDropdown = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -54,7 +50,7 @@ const Navbar = ({ toggleTheme, theme }: any) => {
     <div className="w-screen flex h-[3.5rem] justify-end md:justify-center p-3 items-center fixed bg-white/30 dark:bg-gray-800/60 backdrop-blur-[8px] z-[100]">
       {/* Nornal list for > md screen */}
       <ul
-        className="w-full lg:w-[30%] max-w-[400px] flex justify-between select-none"
+        className="w-full lg:w-[30%] max-w-[400px] flex justify-between "
         id="navbar-list"
       >
         {navItems.map((item, index) => (
@@ -82,6 +78,8 @@ const Navbar = ({ toggleTheme, theme }: any) => {
 
       {/* Hamberger menu for smaller screen */}
       <div
+        tabIndex={0}
+        onKeyUp={() => setDropdownOpen((prev) => !prev)}
         className="bg-gray-200 dark:bg-gray-700 rounded-md p-3 border-[1px] border-gray-300 dark:border-gray-500 ml-4 cursor-pointer z-100 md:hidden mr-0"
         ref={openDropdown}
         onClick={() => setDropdownOpen((prev) => !prev)}
@@ -97,6 +95,9 @@ const Navbar = ({ toggleTheme, theme }: any) => {
       >
         {navItems.map((item, index) => (
           <li
+            onKeyUp={item.action}
+            onClick={item.action}
+            tabIndex={index + 1}
             key={index}
             className={`font-Poppins hover:bg-gray-200 dark:hover:bg-gray-600 text-start list-none cursor-pointer text-gray-700 dark:text-gray-200 font-medium px-4 transition duration-300 ease-in-out pr-[5rem] py-2 ${
               index === navItems.length - 1 && "rounded-b-md"

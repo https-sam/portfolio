@@ -12,8 +12,9 @@ function App() {
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
     ) {
-      return "light";
+      return "dark";
     }
+    return "light";
   });
 
   useEffect(() => {

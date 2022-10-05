@@ -36,15 +36,15 @@ const Home = ({ toggleTheme }: any) => {
         </div>
 
         <div className="flex flex-col">
-          <div className="h-fit w-fit z-0 mb-[3rem]">
+          <div className="h-fit w-fit z-10 mb-[3rem] group">
             <div
               id="intro-shadow"
-              className="h-[4rem] -translate-x-3 peer-hover:translate-y-0 translate-y-5 w-[0rem] md:w-[51.5rem] bg-gray-300 dark:bg-gray-900 absolute rounded-[5px] z-0"
-            ></div>
+              className="h-[4rem] -translate-x-3 group-hover:translate-y-0 group-hover:translate-x-0 translate-y-5 w-[0rem] md:w-[51.7rem] bg-gray-300 dark:bg-gray-900 absolute rounded-[5px] transition-transform duration-[1000ms] ease-in-out"
+            />
 
             <div
               id="intro-container"
-              className="rounded-[5px] p-5 bg-gray-100 peer dark:bg-gray-700 relative hover:cursor-pointer z-10"
+              className="rounded-[5px] p-5 bg-gray-100 peer dark:bg-gray-700 relative hover:cursor-pointer shadow-lg group-hover:shadow-none transition-shadow duration-[1000ms]"
               // id="intro-container"
             >
               <p className="text-gray-700 dark:text-gray-200 fon t-Poppins text-lg md:text-xl font-semibold px-3">
@@ -55,10 +55,10 @@ const Home = ({ toggleTheme }: any) => {
           </div>
           <div className="flex flex-1 justify-center gap-[3rem]">
             <a href={config.myGithubLink} rel="noreferrer" target="_blank">
-              <IoLogoGithub className="w-[2rem] h-[2rem] text-gray-300 cursor-pointer" />
+              <IoLogoGithub className="w-[2rem] h-[2rem] text-gray-300 cursor-pointer hover:text-gray-500 dark:hover:text-gray-400" />
             </a>
             <a href={config.myLinkedinLink} target="_blank" rel="noreferrer">
-              <IoLogoLinkedin className="w-[2rem] h-[2rem] text-gray-300 cursor-pointer" />
+              <IoLogoLinkedin className="w-[2rem] h-[2rem] text-gray-300 cursor-pointer hover:text-gray-500 dark:hover:text-gray-400" />
             </a>
           </div>
         </div>

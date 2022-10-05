@@ -21,14 +21,12 @@ const ProjectCard = (item: Props) => {
         className="bg-black dark:bg-gray-100 py-1 px-3 rounded-md flex items-center gap-3 cursor-pointer z-10 transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg"
       >
         <Github className="h-[1.5rem] w-[1.5rem] stroke-white  dark:stroke-gray-900" />
-        <p className="text-white dark:text-black font-Poppins text-sm font-semibold ">
-          Github
-        </p>
+        <p className="text-white dark:text-black text-sm font-bold ">Github</p>
       </a>
     );
   };
   return (
-    <div className="w-full z-10 flex">
+    <div className="w-full z-10 flex" tabIndex={1}>
       {/* Left side */}
       <div className="hidden lg:block w-[30%] relative">
         <div className="absolute right-0 top-[3rem]">
@@ -60,7 +58,10 @@ const ProjectCard = (item: Props) => {
                   href={item.websiteURI}
                   className="z-10 p-2 hover:bg-gray-100 dark:hover:bg-gray-600/30 rounded-full"
                 >
-                  <IoOpenOutline className="w-[1.5rem] h-[1.5rem] cursor-pointer dark:text-gray-100" />
+                  <IoOpenOutline
+                    className="w-[1.5rem] h-[1.5rem] cursor-pointer dark:text-gray-100"
+                    tabIndex={2}
+                  />
                 </a>
               )}
               {item.githubURI && <GithubBtn />}
