@@ -6,7 +6,7 @@ import { IoApps } from "react-icons/io5";
 import { config } from "../utils/config.default";
 
 const Projects = () => {
-  // Image size should be 750px x 900px
+  // Image size should be 750px x 900px (Or the same ratio)
   const projects = [
     {
       title: "Mobile App",
