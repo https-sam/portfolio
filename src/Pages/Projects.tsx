@@ -13,7 +13,7 @@ const Projects = () => {
       date: "May 2022 - Oct 2022",
       description:
         "A crossplatform Mobile application built for the Kuwait association at CU Boulder. Re-designed the whole UI / UX, migrated the existing features & the database, and implemented: fully functional chat system, events page, explore page, profile page, tutors page & improving the overall loading time by ~30% by caching some heavy data. Also designed and implemented a website for the app for users to be able to review tutors & a tutor sign up form.",
-      platform: "Web / Mobie App",
+      platform: "Mobie / Web App",
       websiteURI: "https://kuwaitcu.netlify.app",
       githubURI: "",
       image: ksabImg,

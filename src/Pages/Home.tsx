@@ -39,7 +39,7 @@ const Home = ({ toggleTheme }: any) => {
           <div className="h-fit w-fit z-10 mb-[3rem] group">
             <div
               id="intro-shadow"
-              className="h-[4rem] -translate-x-3 group-hover:translate-y-0 group-hover:translate-x-0 translate-y-5 w-[0rem] md:w-[51.7rem] bg-gray-300 dark:bg-gray-900 absolute rounded-[5px] transition-transform duration-[1000ms] ease-in-out"
+              className="h-[4rem] -translate-x-3 group-hover:translate-y-0 group-hover:translate-x-0 translate-y-4 w-[0rem] md:w-[51.7rem] bg-gray-300 dark:bg-gray-900 absolute rounded-[5px] transition-transform duration-[1000ms] ease-in-out"
             />
 
             <div
