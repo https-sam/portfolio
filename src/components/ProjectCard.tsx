@@ -1,5 +1,4 @@
 import { IoOpenOutline } from "react-icons/io5";
-import { Link } from "react-router-dom";
 import { ReactComponent as Github } from "../assets/icons/github.svg";
 
 interface Props {
@@ -16,6 +15,7 @@ const ProjectCard = (item: Props) => {
   const GithubBtn = () => {
     return (
       <a
+        rel="noreferrer"
         href={item.githubURI}
         target="_blank"
         className="bg-black py-1 px-3 rounded-md flex items-center gap-3 cursor-pointer z-10 transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg"
@@ -43,16 +43,17 @@ const ProjectCard = (item: Props) => {
         {/* absolute element for floating borders */}
         <div className="w-[95%] h-full absolute right-0 border-t-[1px]" />
 
-        <div className="w-[60%] flex-1 mt-[3rem] flex flex-col">
+        <div className="flex-1 mt-[3rem] flex flex-col">
           <p className="text-2xl font-semibold ml-4 mb-2 text-gray-600 lg:hidden">
             {item.date}
           </p>
           <div className="flex justify-between">
             {/* Bar */}
-            <div className="w-[300px] h-[1.5rem] bg-gray-600" />
+            <div className="flex-1 h-[1.5rem] bg-gray-600" />
             <div className="flex items-center gap-5 mx-5">
               {item.websiteURI && (
                 <a
+                  rel="noreferrer"
                   target="_blank"
                   href={item.websiteURI}
                   className="z-10 p-2 hover:bg-gray-100 rounded-full"
@@ -75,8 +76,9 @@ const ProjectCard = (item: Props) => {
         {/* Image part in the right side */}
         <div className="w-[40%] h-full place-items-center hidden md:grid">
           <img
+            alt="project preview"
             src={item.image}
-            className=" h-[20rem] object-cover rounded-lg mt-[3rem]"
+            className=" h-[20rem] object-cover rounded-lg mt-[3rem] transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg z-10"
           />
         </div>
       </div>

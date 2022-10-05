@@ -63,7 +63,7 @@ const Home = ({ toggleTheme }: any) => {
           </p>
         </div>
         <div className="flex items-center justify-center w-[50%] lg:w-[30%] select-none">
-          <img src={img} className="w-full" />
+          <img src={img} className="w-full" alt="my avatar" />
         </div>
       </div>
       <Projects />
