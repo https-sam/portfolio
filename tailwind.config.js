@@ -8,6 +8,9 @@ module.exports = {
         wideTitle: ["Archivo Black", "sans"],
         Poppins: ["Poppins", "sans"],
       },
+      boxShadow: {
+        depthBottom: "inset 0 1px 1px hsla(0, 0%, 70%, 0.4)",
+      },
     },
   },
   plugins: [],

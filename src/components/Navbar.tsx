@@ -35,6 +35,7 @@ const Navbar = ({ toggleTheme, theme }: any) => {
 
   return (
     <div className="w-screen flex h-[3.5rem] justify-end md:justify-center p-3 items-center fixed bg-white/30 dark:bg-gray-800/30 backdrop-blur-[8px] z-[100]">
+      {/* Nornal list for > md screen */}
       <ul
         className="w-full lg:w-[30%] max-w-[400px] flex justify-between select-none"
         id="navbar-list"
@@ -49,6 +50,7 @@ const Navbar = ({ toggleTheme, theme }: any) => {
         ))}
       </ul>
 
+      {/* Theme Toggle */}
       <div
         className="hover:bg-gray-100 dark:hover:bg-gray-600 p-3 rounded-full grid place-items-center cursor-pointer z-100 md:absolute right-[1rem] md:right-[3rem]"
         onClick={toggleTheme}
@@ -60,8 +62,9 @@ const Navbar = ({ toggleTheme, theme }: any) => {
         )}
       </div>
 
+      {/* Hamberger menu for smaller screen */}
       <div
-        className="bg-gray-200 dark:bg-gray-700 rounded-md p-3 border-[1px] border-gray-300 dark:border-gray-500 ml-4 cursor-pointer z-100 md:hidden mr-2"
+        className="bg-gray-200 dark:bg-gray-700 rounded-md p-3 border-[1px] border-gray-300 dark:border-gray-500 ml-4 cursor-pointer z-100 md:hidden mr-0"
         ref={openDropdown}
         onClick={() => setDropdownOpen((prev) => !prev)}
       >
@@ -69,7 +72,7 @@ const Navbar = ({ toggleTheme, theme }: any) => {
       </div>
 
       <div
-        className={`dark:bg-gray-600 bg-gray-100 rounded-md md:hidden absolute right-[1rem] top-[3.5rem] border-[.01px] cursor-pointer z-[10] shadow-lg ${
+        className={`dark:bg-gray-700 bg-gray-100 rounded-md md:hidden absolute right-[1rem] top-[3.5rem]  cursor-pointer z-[10] border-[.01px] shadow-lg pt-[1px] dark:border-0 dark:shadow-depthBottom ${
           isOpen ? "block" : "hidden"
         }`}
         ref={dropdownRef}
@@ -77,7 +80,7 @@ const Navbar = ({ toggleTheme, theme }: any) => {
         {navItems.map((item, index) => (
           <li
             key={index}
-            className={`font-Poppins hover:bg-gray-200 dark:hover:bg-gray-700 text-start list-none cursor-pointer text-gray-700 dark:text-gray-200 font-medium px-4 transition duration-300 ease-in-out pr-[5rem] py-2 ${
+            className={`font-Poppins hover:bg-gray-200 dark:hover:bg-gray-600 text-start list-none cursor-pointer text-gray-700 dark:text-gray-200 font-medium px-4 transition duration-300 ease-in-out pr-[5rem] py-2 ${
               index === navItems.length - 1 && "rounded-b-md"
             } ${index === 0 && "rounded-t-md"}`}
           >
