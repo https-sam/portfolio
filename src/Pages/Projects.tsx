@@ -32,7 +32,7 @@ const Projects = () => {
       title: "Interactive Showcase Website",
       date: "March 2022 - May 2022",
       description:
-        "A website built for my client, designed to bring improvements to his books by allowing users to leave suggestions for any line of the books. Designed and implemented CMS (Content Management System) with Javascript from scratch, allowing the admin to change the edit of the contents of the website at any time.",
+        "A website built for my client, designed to bring improvements to his books by allowing users to leave suggestions for any line of the books. Designed and implemented CMS (Content Management System) with Javascript from scratch, allowing the admin to edit of the contents of the website at any time.",
       platform: "Web App",
       websiteURI: "https://www.lucantranslation.com/book1",
       githubURI: "",

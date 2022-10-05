@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
+// use BrowserRouter if error
 import Navbar from "./components/Navbar";
 import Home from "./Pages/Home";
 
@@ -33,12 +34,12 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar toggleTheme={toggleTheme} theme={theme} />
       <Routes>
         <Route path="/" element={<Home toggleTheme={toggleTheme} />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
