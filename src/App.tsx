@@ -37,7 +37,10 @@ function App() {
     <HashRouter>
       <Navbar toggleTheme={toggleTheme} theme={theme} />
       <Routes>
-        <Route path="/" element={<Home toggleTheme={toggleTheme} />} />
+        <Route
+          path="/"
+          element={<Home toggleTheme={toggleTheme} theme={theme} />}
+        />
       </Routes>
     </HashRouter>
   );

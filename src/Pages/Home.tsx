@@ -3,10 +3,15 @@ import "./style.css";
 import img from "../assets/images/me.png";
 import Projects from "./Projects";
 import { config } from "../utils/config.default";
+import Skills from "./Skills";
 
-const Home = ({ toggleTheme }: any) => {
+const Home = ({ toggleTheme, theme }: any) => {
   return (
-    <div className="bg-white dark:bg-gray-800">
+    <div
+      className={`bg-white dark:bg-gray-800 relative ${
+        theme === "dark" && "grid-background"
+      }`}
+    >
       <div
         className="flex lg:px-10 flex-col lg:flex-row w-screen flex-wrap justify-center items-center pt-[5rem] lg:pt-13 mb-[4rem] md:mb-[8rem]"
         id="section-about"
@@ -20,7 +25,7 @@ const Home = ({ toggleTheme }: any) => {
               S
             </span>
             <IoBug
-              className="text-green-600 h-[5rem] inline cursor-pointer hover:text-purple-600"
+              className="text-green-600 z-[1] h-[5rem] inline cursor-pointer hover:text-purple-600"
               onClick={toggleTheme}
             />
             <span className="font-wideTitle text-[10vw] lg:text-[5.5rem] tracking-[10px] text-black dark:text-gray-200">
@@ -53,7 +58,7 @@ const Home = ({ toggleTheme }: any) => {
               </p>
             </div>
           </div>
-          <div className="flex flex-1 justify-center gap-[3rem]">
+          <div className="flex flex-1 justify-center gap-[3rem] z-[1]">
             <a href={config.myGithubLink} rel="noreferrer" target="_blank">
               <IoLogoGithub className="w-[2rem] h-[2rem] text-gray-300 cursor-pointer hover:text-gray-500 dark:hover:text-gray-400" />
             </a>
@@ -64,6 +69,7 @@ const Home = ({ toggleTheme }: any) => {
         </div>
       </div>
       <Projects />
+      <Skills />
     </div>
   );
 };
