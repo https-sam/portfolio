@@ -52,12 +52,12 @@ const Projects = () => {
         ))}
       </div>
 
-      <div className="grid place-items-center mt-10">
+      <div className="grid place-items-center mt-10 ">
         <a
           rel="noreferrer"
           target="_blank"
           href={config.myGithubLink}
-          className="bg-gray-600 dark:bg-gray-100 w-fit rounded-[7px] px-4 py-2 cursor-pointer flex items-center gap-3 text-white dark:text-gray-800 font-Poppins "
+          className="bg-gray-600 dark:bg-gray-100 w-fit z-[1] rounded-[7px] px-4 py-2 cursor-pointer flex items-center gap-3 text-white dark:text-gray-800 font-Poppins "
         >
           See More
           <IoApps />

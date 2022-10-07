@@ -47,7 +47,7 @@ const Navbar = ({ toggleTheme, theme }: any) => {
   );
 
   return (
-    <div className="w-screen flex h-[3.5rem] justify-end md:justify-center p-3 items-center fixed bg-white/30 dark:bg-gray-800/60 backdrop-blur-[8px] z-[100]">
+    <div className="w-screen flex h-[3.5rem] justify-end md:justify-center p-3 items-center fixed bg-white/30 dark:bg-gray-800/60 backdrop-blur-[3px] md:backdrop-blur-[5px] z-[100]">
       {/* Nornal list for > md screen */}
       <ul
         className="w-full lg:w-[30%] max-w-[400px] flex justify-between "
