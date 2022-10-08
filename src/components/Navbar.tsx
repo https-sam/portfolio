@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from "react";
-import { IoSunny, IoMoon, IoMenu } from "react-icons/io5";
-import { useOutsideClickDetector } from "../utils/customHooks";
+import { useRef, useState } from "react";
+import { IoMenu, IoMoon, IoSunny } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
+import { useOutsideClickDetector } from "../utils/customHooks";
 import "./styles.css";
 
 const Navbar = ({ toggleTheme, theme }: any) => {
