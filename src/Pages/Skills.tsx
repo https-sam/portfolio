@@ -20,6 +20,7 @@ import awsIcon from "../assets/images/aws.png";
 import linuxIcon from "../assets/images/linux.png";
 import dockerIcon from "../assets/images/docker.png";
 import figmaIcon from "../assets/images/figma.png";
+import sqlIcon from "../assets/images/sql.png";
 
 // import sqlIcon from "../assets/images/sql.jpeg";
 
@@ -50,7 +51,7 @@ const Skills = () => {
         },
         {
           name: "SQL",
-          icon: expressIcon,
+          icon: sqlIcon,
         },
         {
           name: "Firebase",
@@ -138,16 +139,17 @@ const Skills = () => {
   ];
 
   return (
-    <div>
+    <div className="pb-20">
       <h1
-        className="font-wideTitle text-[8vw] mb-5 ml-5 mt-10 md:text-[3.5rem] xl:text-[4rem] tracking-[2px] md:tracking-[4px] text-gray-800 lg:text-white dark:text-gray-200 z-10 select-none"
+        className="font-wideTitle text-[8vw] mb-5 ml-8 md:ml-20 mt-10 md:text-[3.5rem] xl:text-[4rem] tracking-[2px] md:tracking-[4px] text-gray-800 dark:text-gray-200 z-10 select-none"
         id="section-skills"
       >
         Skills
       </h1>
-      <div className="flex gap-10 justify-center flex-wrap">
-        {skills.map((e) => (
+      <div className="flex gap-10 justify-center flex-wrap bg-white dark:bg-transparent mx-2 md:mx-10 py-10 rounded-[15px]  dark:border-none  dark:shadow-none">
+        {skills.map((e, index) => (
           <SkillCard
+            key={index}
             title={e.title}
             titleIcon={e.titleIcon}
             description={e.description}

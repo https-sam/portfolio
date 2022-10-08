@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
 // use BrowserRouter if error
 import Navbar from "./components/Navbar";
+import Contact from "./Pages/Contact";
 import Home from "./Pages/Home";
 
 function App() {
@@ -35,11 +36,26 @@ function App() {
 
   return (
     <HashRouter>
-      <Navbar toggleTheme={toggleTheme} theme={theme} />
       <Routes>
         <Route
           path="/"
-          element={<Home toggleTheme={toggleTheme} theme={theme} />}
+          element={
+            <>
+              <Navbar toggleTheme={toggleTheme} theme={theme} />
+
+              <Home toggleTheme={toggleTheme} theme={theme} />
+            </>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <div>
+              <div className="md:flex justify-center">
+                <Contact />
+              </div>
+            </div>
+          }
         />
       </Routes>
     </HashRouter>

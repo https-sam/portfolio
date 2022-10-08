@@ -1,9 +1,15 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { IoSunny, IoMoon, IoMenu } from "react-icons/io5";
 import { useOutsideClickDetector } from "../utils/customHooks";
+import { useNavigate } from "react-router-dom";
 import "./styles.css";
 
 const Navbar = ({ toggleTheme, theme }: any) => {
+  const [isOpen, setDropdownOpen] = useState(false);
+  const openDropdown = useRef<HTMLDivElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
+
   const scrollInto = (id: string) => {
     if (document.getElementById(id)) {
       document.getElementById(id)?.scrollIntoView({
@@ -32,13 +38,12 @@ const Navbar = ({ toggleTheme, theme }: any) => {
     {
       name: "Contact",
       link: "",
-      action: () => scrollInto("section-contact"),
+      action: () => {
+        // scrollInto("section-contact");
+        navigate("/contact");
+      },
     },
   ];
-
-  const [isOpen, setDropdownOpen] = useState(false);
-  const openDropdown = useRef<HTMLDivElement>(null);
-  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useOutsideClickDetector(
     openDropdown,
@@ -49,6 +54,7 @@ const Navbar = ({ toggleTheme, theme }: any) => {
   return (
     <div className="w-screen flex h-[3.5rem] justify-end md:justify-center p-3 items-center fixed bg-white/30 dark:bg-gray-800/60 backdrop-blur-[3px] md:backdrop-blur-[5px] z-[100]">
       {/* Nornal list for > md screen */}
+
       <ul
         className="w-full lg:w-[30%] max-w-[400px] flex justify-between "
         id="navbar-list"

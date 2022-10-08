@@ -92,7 +92,7 @@ const ProjectCard = (item: Props) => {
           <img
             alt="project preview"
             src={item.image}
-            className=" h-[20rem] hover:opacity-75 -translate-y-5 object-cover rounded-lg mt-[3rem] transition duration-300 ease-in-out hover:-translate-y-8 hover:shadow-xl z-10"
+            className=" h-[20rem] shadow-md hover:opacity-75 -translate-y-5 object-cover rounded-lg mt-[3rem] transition duration-300 ease-in-out hover:-translate-y-8 hover:shadow-xl z-10"
           />
         </a>
       </div>

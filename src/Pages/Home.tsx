@@ -25,7 +25,7 @@ const Home = ({ toggleTheme, theme }: any) => {
               S
             </span>
             <IoBug
-              className="text-green-600 z-[1] h-[5rem] inline cursor-pointer hover:text-purple-600"
+              className="text-green-600 animate-pulse z-[1] h-[5rem] inline cursor-pointer hover:text-purple-600"
               onClick={toggleTheme}
             />
             <span className="font-wideTitle text-[10vw] lg:text-[5.5rem] tracking-[10px] text-black dark:text-gray-200">
