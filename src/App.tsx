@@ -51,7 +51,7 @@ function App() {
           path="/contact"
           element={
             <div>
-              <div className="md:flex justify-center">
+              <div className="md:flex justify-center w-screen min-h-screen bg-white dark:bg-gray-800">
                 <Contact />
               </div>
             </div>
