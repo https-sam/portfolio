@@ -37,7 +37,11 @@ const Home = ({ toggleTheme, theme }: any) => {
           </p>
         </div>
         <div className="flex items-center justify-center w-[50%] lg:w-[30%] select-none">
-          <img src={img} className="w-full" alt="my avatar" />
+          <img
+            src={img}
+            className="w-full hover:scale-[1.05] transition duration-300 ease-in-out z-[1]"
+            alt="my avatar"
+          />
         </div>
 
         <div className="flex flex-col">
