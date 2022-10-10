@@ -95,11 +95,11 @@ const Contact = () => {
           </div>
 
           <div>
-            <p className="font-Poppins mb-2 dark:text-gray-300">Your Name</p>
+            <p className="font-Poppins mb-2 dark:text-gray-300">Your Email</p>
             <label className="flex items-center gap-3 border-[1px] border-gray-300 rounded-[5px] p-3 w-full focus-within:border-blue-700 dark:shadow-shadowDownward dark:border-none dark:text-gray-200">
               <IoMailOutline className="w-[1.5rem] h-[1.5rem]" />
               <input
-                placeholder="Your Name"
+                placeholder="Your Email"
                 className="bg-transparent rounded-[3px] outline-none flex-1"
               ></input>
             </label>
