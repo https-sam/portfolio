@@ -34,23 +34,27 @@ const Contact = () => {
       <div className="flex h-full mt-5 md:mt-[3rem] flex-wrap max-w-[2000px]">
         <section className="mr-10">
           <div className="flex flex-col gap-2">
-            <div className="flex gap-6 border-[2px] border-transparent rounded-lg hover:border-blue-700 w-fit pr-[6rem] pl-5 py-4 cursor-pointer">
+            <div
+              className="flex gap-6 border-[2px] border-transparent rounded-lg hover:border-blue-700 w-fit pr-[6rem] pl-5 py-4 cursor-pointer"
+              onClick={() =>
+                (window.location.href = "mailto:osgo1115@icloud.com")
+              }
+            >
               <IoMail className="w-[1.5rem] h-[1.5rem] text-blue-700" />
-              <a
-                className="font-Poppins text-gray-800 dark:text-white"
-                href="mailto:osgo1115@icloud.com"
-              >
+              <p className="font-Poppins text-gray-800 dark:text-white">
                 osgo1115@icloud.com
-              </a>
+              </p>
             </div>
-            <div className="flex gap-6 border-[2px] border-transparent rounded-lg hover:border-blue-700 w-fit pr-[6rem] pl-5 py-4 cursor-pointer">
+            <div
+              className="flex gap-6 border-[2px] border-transparent rounded-lg hover:border-blue-700 w-fit pr-[6rem] pl-5 py-4 cursor-pointer"
+              onClick={() =>
+                (window.location.href = "mailto:info@yourprofessor.io")
+              }
+            >
               <IoMail className="w-[1.5rem] h-[1.5rem] text-blue-700" />
-              <a
-                className="font-Poppins text-gray-800 dark:text-white"
-                href="mailto:info@yourprofessor.io"
-              >
+              <p className="font-Poppins text-gray-800 dark:text-white">
                 info@yourprofessor.io
-              </a>
+              </p>
             </div>
           </div>
 
