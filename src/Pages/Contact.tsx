@@ -77,10 +77,10 @@ const Contact = () => {
           </div>
         </section>
 
-        <div className="w-[40rem] h-fit border-t-[1px] shadow-md  bg-white dark:bg-gray-200 rounded-[10px] p-5 py-8 flex flex-col mt-[3rem] justify-center ml-auto gap-4">
+        <div className="w-[40rem] h-fit border-t-[1px] dark:border-none shadow-md  bg-white rounded-[10px] p-5 py-8 flex flex-col mt-[3rem] justify-center ml-auto gap-4 dark:shadow-shadowDownward dark:bg-darkGray">
           <div>
-            <p className="font-Poppins mb-2">Your Name</p>
-            <label className="flex items-center gap-3 border-[1px] border-gray-300 rounded-[5px] p-3 w-full focus-within:border-blue-700">
+            <p className="font-Poppins mb-2 dark:text-gray-300">Your Name</p>
+            <label className="flex items-center gap-3 border-[1px] border-gray-300 rounded-[5px] p-3 w-full focus-within:border-blue-700 dark:shadow-shadowDownward dark:border-none dark:text-gray-200">
               <IoPersonOutline className="w-[1.5rem] h-[1.5rem]" />
               <input
                 ref={nameRef}
@@ -91,8 +91,8 @@ const Contact = () => {
           </div>
 
           <div>
-            <p className="font-Poppins mb-2">Your Name</p>
-            <label className="flex items-center gap-3 border-[1px] border-gray-300 rounded-[5px] p-3 w-full focus-within:border-blue-700">
+            <p className="font-Poppins mb-2 dark:text-gray-300">Your Name</p>
+            <label className="flex items-center gap-3 border-[1px] border-gray-300 rounded-[5px] p-3 w-full focus-within:border-blue-700 dark:shadow-shadowDownward dark:border-none dark:text-gray-200">
               <IoMailOutline className="w-[1.5rem] h-[1.5rem]" />
               <input
                 placeholder="Your Name"
@@ -102,8 +102,8 @@ const Contact = () => {
           </div>
 
           <div>
-            <p className="font-Poppins mb-2">Message</p>
-            <label className="flex gap-3 border-[1px] border-gray-300 rounded-[5px] p-3 w-full focus-within:border-blue-700">
+            <p className="font-Poppins mb-2 dark:text-gray-300">Message</p>
+            <label className="flex gap-3 border-[1px] border-gray-300 rounded-[5px] p-3 w-full focus-within:border-blue-700 dark:shadow-shadowDownward dark:border-none dark:text-gray-200">
               <textarea className="bg-transparent rounded-[3px] outline-none flex-1 min-h-[8rem]"></textarea>
             </label>
           </div>
