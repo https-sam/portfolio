@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
-// use BrowserRouter if error
 import Navbar from "./components/Navbar";
 import Contact from "./Pages/Contact";
 import Home from "./Pages/Home";
