@@ -81,10 +81,10 @@ const Contact = () => {
           </div>
         </section>
 
-        <div className="w-[40rem] h-fit border-t-[1px] dark:border-none shadow-md  bg-white rounded-[10px] p-5 py-8 flex flex-col mt-[3rem] justify-center ml-auto gap-4 dark:shadow-shadowDownward dark:bg-darkGray">
+				<div className="w-[40rem] h-fit border-[2px] dark:border-none shadow-md dark:shadow-none bg-white rounded-[10px] p-5 py-8 flex flex-col mt-[3rem] justify-center ml-auto gap-4 dark:bg-gray-800">
           <div>
-            <p className="font-Poppins mb-2 dark:text-gray-300">Your Name</p>
-            <label className="flex items-center gap-3 border-[1px] border-gray-300 rounded-[5px] p-3 w-full focus-within:border-blue-700 dark:shadow-shadowDownward dark:border-none dark:text-gray-200">
+            <p className="font-Poppins mb-2 dark:text-gray-200">Your Name</p>
+						<label className="flex items-center gap-3  dark:bg-gray-900/40 border-[2px] border-gray-300 rounded-[5px] p-3 w-full focus-within:border-blue-700 dark:shadow-shadowDownward dark:border-none dark:text-gray-200">
               <IoPersonOutline className="w-[1.5rem] h-[1.5rem]" />
               <input
                 ref={nameRef}
@@ -95,8 +95,8 @@ const Contact = () => {
           </div>
 
           <div>
-            <p className="font-Poppins mb-2 dark:text-gray-300">Your Email</p>
-            <label className="flex items-center gap-3 border-[1px] border-gray-300 rounded-[5px] p-3 w-full focus-within:border-blue-700 dark:shadow-shadowDownward dark:border-none dark:text-gray-200">
+            <p className="font-Poppins mb-2 dark:text-gray-200">Your Email</p>
+            <label className="flex items-center gap-3 dark:bg-gray-900/40 border-[2px] border-gray-300 rounded-[5px] p-3 w-full focus-within:border-blue-700 dark:shadow-shadowDownward dark:border-none dark:text-gray-200">
               <IoMailOutline className="w-[1.5rem] h-[1.5rem]" />
               <input
                 placeholder="Your Email"
@@ -107,7 +107,7 @@ const Contact = () => {
 
           <div>
             <p className="font-Poppins mb-2 dark:text-gray-300">Message</p>
-            <label className="flex gap-3 border-[1px] border-gray-300 rounded-[5px] p-3 w-full focus-within:border-blue-700 dark:shadow-shadowDownward dark:border-none dark:text-gray-200">
+            <label className="flex gap-3 border-[2px] dark:bg-gray-900/40 border-gray-300 rounded-[5px] p-3 w-full focus-within:border-blue-700 dark:shadow-shadowDownward dark:border-none dark:text-gray-200">
               <textarea className="bg-transparent rounded-[3px] outline-none flex-1 min-h-[8rem]"></textarea>
             </label>
           </div>
