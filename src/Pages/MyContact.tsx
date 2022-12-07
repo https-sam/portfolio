@@ -288,6 +288,7 @@ export default function Contact() {
                       </label>
                       <div className="mt-1">
                         <input
+                          required
                           type="text"
                           name="first_name"
                           id="first_name"
@@ -305,6 +306,7 @@ export default function Contact() {
                       </label>
                       <div className="mt-1">
                         <input
+                          required
                           type="text"
                           name="last_name"
                           id="last_name"
@@ -322,6 +324,7 @@ export default function Contact() {
                       </label>
                       <div className="mt-1">
                         <input
+                          required
                           id="email"
                           name="email"
                           type="email"
@@ -366,6 +369,7 @@ export default function Contact() {
                         </label>
                       </div>
                       <textarea
+                        required
                         id="message"
                         name="message"
                         rows={4}
