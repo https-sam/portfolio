@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { IoMenu, IoMoon, IoSunny } from "react-icons/io5";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useOutsideClickDetector } from "../utils/customHooks";
 import "./styles.css";
 
@@ -9,6 +9,7 @@ const Navbar = ({ toggleTheme, theme }: any) => {
   const openDropdown = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollInto = (id: string) => {
     if (document.getElementById(id)) {
@@ -23,23 +24,33 @@ const Navbar = ({ toggleTheme, theme }: any) => {
     {
       name: "About",
       link: "",
-      action: () => scrollInto("section-about"),
+      action: () => {
+        if (location.pathname !== "/") navigate("/");
+        scrollInto("section-about");
+      },
     },
     {
       name: "Projects",
       link: "",
-      action: () => scrollInto("section-projects"),
+      action: () => {
+        if (location.pathname !== "/") navigate("/");
+        scrollInto("section-projects");
+      },
     },
     {
       name: "Skills",
       link: "",
-      action: () => scrollInto("section-skills"),
+      action: () => {
+        if (location.pathname !== "/") navigate("/");
+        scrollInto("section-skills");
+      },
     },
     {
       name: "Contact",
       link: "",
       action: () => {
         // scrollInto("section-contact");
+        if (location.pathname !== "/") navigate("/");
         navigate("/contact");
       },
     },

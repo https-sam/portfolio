@@ -1,5 +1,4 @@
-import { config } from "../utils/config.default";
-import React, { useRef } from "react";
+import { useRef } from "react";
 import {
   IoArrowBack,
   IoLogoGithub,
@@ -9,6 +8,7 @@ import {
   IoPersonOutline,
 } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
+import { config } from "../utils/config.default";
 const Contact = () => {
   const navigate = useNavigate();
   const nameRef = useRef(null);
@@ -81,10 +81,10 @@ const Contact = () => {
           </div>
         </section>
 
-				<div className="w-[40rem] h-fit border-[2px] dark:border-none shadow-md dark:shadow-none bg-white rounded-[10px] p-5 py-8 flex flex-col mt-[3rem] justify-center ml-auto gap-4 dark:bg-gray-800">
+        <div className="w-[40rem] h-fit border-[2px] dark:border-none shadow-md dark:shadow-none bg-white rounded-[10px] p-5 py-8 flex flex-col mt-[3rem] justify-center ml-auto gap-4 dark:bg-gray-800">
           <div>
             <p className="font-Poppins mb-2 dark:text-gray-200">Your Name</p>
-						<label className="flex items-center gap-3  dark:bg-gray-900/40 border-[2px] border-gray-300 rounded-[5px] p-3 w-full focus-within:border-blue-700 dark:shadow-shadowDownward dark:border-none dark:text-gray-200">
+            <label className="flex items-center gap-3  dark:bg-gray-900/40 border-[2px] border-gray-300 rounded-[5px] p-3 w-full focus-within:border-blue-700 dark:shadow-shadowDownward dark:border-none dark:text-gray-200">
               <IoPersonOutline className="w-[1.5rem] h-[1.5rem]" />
               <input
                 ref={nameRef}

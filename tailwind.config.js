@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -17,8 +19,10 @@ module.exports = {
       },
       colors: {
         darkGray: "#1D2633",
+        "warm-gray": colors.warmGray,
+        teal: colors.teal,
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

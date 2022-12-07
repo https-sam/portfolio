@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Contact from "./Pages/Contact";
+import Contact from "./Pages/MyContact";
 import Home from "./Pages/Home";
 
 function App() {
@@ -50,9 +50,8 @@ function App() {
           path="/contact"
           element={
             <div>
-              <div className="md:flex justify-center w-screen min-h-screen bg-white dark:bg-gray-800">
-                <Contact />
-              </div>
+              <Navbar toggleTheme={toggleTheme} theme={theme} />
+              <Contact />
             </div>
           }
         />
