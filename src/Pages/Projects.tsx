@@ -2,12 +2,23 @@ import ProjectCard from "../components/ProjectCard";
 import algoImg from "../assets/images/algo.png";
 import ksabImg from "../assets/images/ksab.png";
 import lucanImg from "../assets/images/lucan.png";
+import sudoku from "../assets/images/sudokusolver.png";
 import { IoApps } from "react-icons/io5";
 import { config } from "../utils/config.default";
 
 const Projects = () => {
   // Image size should be 750px x 900px (Or the same ratio)
   const projects = [
+    {
+      title: "Online Sudoku Solver",
+      date: "December - 2022",
+      description:
+        "A website that solves 9x9 sudoku. A fun little side project.",
+      platform: "Web App",
+      websiteURI: "https://samssudokusolver.netlify.app",
+      githubURI: "https://github.com/https-sam/sudokusolver",
+      image: sudoku,
+    },
     {
       title: "KSAB",
       date: "May 2022 - Oct 2022",
