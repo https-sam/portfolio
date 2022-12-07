@@ -8,6 +8,7 @@ import { config } from "../utils/config.default";
 
 const Projects = () => {
   // Image size should be 750px x 900px (Or the same ratio)
+
   const projects = [
     {
       title: "Online Sudoku Solver",
